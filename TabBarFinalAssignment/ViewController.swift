@@ -9,7 +9,7 @@ struct MyModel {
     var image : String?
 }
 
-class FirstViewController : UIViewController, UITableViewDelegate, UITableViewDataSource {
+class FirstViewController : UIViewController {
     
     var myData = MyResponse()
     
@@ -17,10 +17,13 @@ class FirstViewController : UIViewController, UITableViewDelegate, UITableViewDa
          super.viewDidLoad()
          myData = MyResponse(data: [MyModel(name: "Burger", image: "burger"),MyModel(name: "Pizza", image: "noodles"),MyModel(name: "Pasta", image: "pasta"),MyModel(name: "Noodle", image: "noodles"),])
      }
+}
+
+extension FirstViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
              return 200
-         }
+     }
      
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
          return myData.data?.count ?? 0

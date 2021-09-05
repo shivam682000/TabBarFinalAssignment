@@ -8,7 +8,7 @@ struct MyData1 {
     var laptopImage : String?
 }
 
-class SecondViewController : UIViewController, UICollectionViewDelegate,UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
+class SecondViewController : UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     var mydata = MyResponse1()
@@ -17,6 +17,9 @@ class SecondViewController : UIViewController, UICollectionViewDelegate,UICollec
         super.viewDidLoad()
         mydata = MyResponse1(data: [MyData1(laptopName: "HP", laptopImage: "hp"),MyData1(laptopName: "Lenovo", laptopImage: "lenovo"),MyData1(laptopName: "Dell", laptopImage: "dell"),MyData1(laptopName: "MI", laptopImage: "mi"),MyData1(laptopName: "Apple", laptopImage: "apple"),MyData1(laptopName: "Acer", laptopImage: "acer"),MyData1(laptopName: "HP", laptopImage: "hp"),MyData1(laptopName: "Lenovo", laptopImage: "lenovo"),MyData1(laptopName: "Dell", laptopImage: "dell"),MyData1(laptopName: "MI", laptopImage: "mi"),MyData1(laptopName: "Apple", laptopImage: "apple"),MyData1(laptopName: "Acer", laptopImage: "acer"),MyData1(laptopName: "HP", laptopImage: "hp"),MyData1(laptopName: "Lenovo", laptopImage: "lenovo"),MyData1(laptopName: "Dell", laptopImage: "dell"),MyData1(laptopName: "MI", laptopImage: "mi"),MyData1(laptopName: "Apple", laptopImage: "apple"),MyData1(laptopName: "Acer", laptopImage: "acer")])
     }
+}
+
+extension SecondViewController :UICollectionViewDelegate, UICollectionViewDataSource,    UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
        return mydata.data?.count ?? 0

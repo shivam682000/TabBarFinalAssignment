@@ -10,8 +10,6 @@ import UIKit
 class CollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var image2: UIImageView!
-    
-    
     @IBOutlet weak var label2: UILabel!
     
     func configureItem(data : MyData1?) {
