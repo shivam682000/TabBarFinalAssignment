@@ -24,7 +24,7 @@ extension FirstViewController : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
              return 200
      }
-     
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
          return myData.data?.count ?? 0
      }

@@ -19,7 +19,7 @@ class DetailViewController: UIViewController {
     }
       self.navigationItem.title = unwrappedData.name
       dimage1.image = UIImage(named: unwrappedData.image ?? "")
-      dlabel1.text = unwrappedData.name
+//      dlabel1.text = unwrappedData.name
     }
     
     func setup2(){
@@ -28,9 +28,8 @@ class DetailViewController: UIViewController {
         }
         self.navigationItem.title = unwrappedData2.laptopName
         dimage1.image = UIImage(named: unwrappedData2.laptopImage ?? "")
-        dlabel1.text = unwrappedData2.laptopName
+//        dlabel1.text = unwrappedData2.laptopName
     }
-    
     
     func configureData(data : MyModel?) {
         self.myData = data
